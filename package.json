@@ -1,0 +1,22 @@
+{
+  "name": "1-js-intro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "Namudarbai": "node --watch ./js/destytojoNamudarbai1.js",
+    "Gabijosuzduotis": "node --watch ./js/Gabijosuzduotis.js",
+    "if": "node --watch ./js/5-if.js",
+    "boolean": "node --watch ./js/4-boolean.js",
+    "function": "node --watch ./js/3-function.js",
+    "zodis": "node --watch ./js/zodisatvirksciai.js",
+    "string": "node --watch ./js/2-string.js",
+    "praktiniai": "node --watch ./js/test.js",
+    "numbres": "node --watch ./js/1-numbres.js",
+    "js": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
