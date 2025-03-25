@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "typeoff": "node --watch ./js/7-typeoff.js",
+    "multiply": "node --watch ./task/multiply.js",
+    "text-size": "node --watch ./task/text-size.js",
+    "adult": "node --watch ./task/adult.js",
+    "Array": "node --watch ./js/6-array.js",
     "Namudarbai": "node --watch ./js/destytojoNamudarbai1.js",
     "Gabijosuzduotis": "node --watch ./js/Gabijosuzduotis.js",
     "if": "node --watch ./js/5-if.js",

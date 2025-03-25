@@ -29,13 +29,13 @@ console.log(n2);
 let n3 = [100,200,300,400,500];
 console.log(n3);
 
-let bandmates = ['Hitori', 'Ryo', 'Nijika', 'Ikuyo', 'Kikuri'];
+const bandmates = ['Hitori', 'Ryo', 'Nijika', 'Ikuyo', 'Kikuri'];
 console.log(bandmates);
 
-let YIW = ['Ichiban', 'Kiryu', 'Tomikawa', 'Chitose', 'Saeko'];
+const YIW = ['Ichiban', 'Kiryu', 'Tomikawa', 'Chitose', 'Saeko'];
 console.log(YIW);
 
-let metallica = ['James', 'Lars', 'Kirk', 'Cliff', 'Jason'];
+const metallica = ['James', 'Lars', 'Kirk', 'Cliff', 'Jason'];
 console.log(metallica);
 
 const h = '------------veiksmai su kintamaisiais-------------------';
@@ -49,10 +49,67 @@ console.log(zodziai);
 
 console.log(n1)
 
-let numbers = [1,2,3,4,5]; 
-let skaiciavimas = numbers.map(num => numbers[0] - numbers[1] + numbers[2] - numbers[3] + numbers[4]); 
-console.log(skaiciavimas)
-//nepaėjo, nesimokėm dar array'ju bandžiau pats gilintis bet neišeina, paklaust Gabijos
+let numbers = [1,2,3,4,5];
+let skaiciavimas = 0;
+skaiciavimas = skaiciavimas + numbers[0];
+skaiciavimas = skaiciavimas - numbers[1];
+skaiciavimas = skaiciavimas + numbers[2];
+skaiciavimas = skaiciavimas - numbers[3];
+skaiciavimas = skaiciavimas + numbers[4];
+
+console.log(skaiciavimas);
+
+let combo = ''
+
+combo = combo + bandmates [4];
+combo = combo + ', ';
+combo = combo + bandmates [3];
+combo = combo + ', ';
+combo = combo + bandmates [2];
+combo = combo + ', ';
+combo = combo + bandmates [1];
+combo = combo + ', ';
+combo = combo + bandmates [0];
+combo = combo + '.';
+
+console.log(combo)
+
+
+let combo2 = ''
+
+combo2 = combo2 + YIW [4];
+combo2 = combo2 + ', ';
+combo2 = combo2 + YIW [3];
+combo2 = combo2 + ', ';
+combo2 = combo2 + YIW [2];
+combo2 = combo2 + ', ';
+combo2 = combo2 + YIW [1];
+combo2 = combo2 + ', ';
+combo2 = combo2 + YIW [0];
+combo2 = combo2 + '.';
+
+console.log(combo2)
+
+
+let combo3 = ''
+
+combo3 = combo3 + metallica [4];
+combo3 = combo3 + ', ';
+combo3 = combo3 + metallica [3];
+combo3 = combo3 + ', ';
+combo3 = combo3 + metallica [2];
+combo3 = combo3 + ', ';
+combo3 = combo3 + metallica [1];
+combo3 = combo3 + ', ';
+combo3 = combo3 + metallica [0];
+combo3 = combo3 + '.';
+
+console.log(combo3)
+
+
+
+
+
 
 const i = '---------------------Kintamuju palyginimai-----------------------'
 console.log(i);
@@ -389,6 +446,9 @@ console.log(false || false || false || false);
 
 const textas15 = "---------------4x1-------------------------"
 console.log(textas15)
+
+console.clear();
+console.clear();
 
 
 
