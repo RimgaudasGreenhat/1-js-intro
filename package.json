@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "intervalas": "node --watch ./task/inteval-sum.js",
+    "multitable": "node --watch ./task/multi-table.js",
+    "for": "node --watch ./js/8-for.js",
+    "marks-average": "node --watch ./task/marks-average.js",
     "typeoff": "node --watch ./js/7-typeoff.js",
     "multiply": "node --watch ./task/multiply.js",
     "text-size": "node --watch ./task/text-size.js",
