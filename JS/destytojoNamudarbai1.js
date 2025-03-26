@@ -201,6 +201,66 @@ if (t1length <= t2length){
 
 
 
+const array = ['masina', 'dviratis'];
+
+console.log (array[0].length);
+console.log (array[1].length);
+
+if (array[0].length > array[1].length)
+    {
+    console.log('Pomidoras.');
+    } else 
+    {
+    console.log('Bandykite kitą kartą.');
+    }
+
+if (array[0].length < array[1].length)
+    {
+    console.log('Pomidoras.');
+    } else 
+    {
+    console.log('Bandykite kitą kartą.');
+    }
+
+if (array[0].length === array[1].length)
+    {
+    console.log('Pomidoras.');
+    } else 
+    {
+    console.log('Bandykite kitą kartą.');
+    }
+
+if (array[0].length !== array[1].length)
+    {
+    console.log('Pomidoras.');
+    } else 
+    {
+    console.log('Bandykite kitą kartą.');
+    }
+
+if (array[0].length >= array[1].length)
+    {
+    console.log('Pomidoras.');
+    } else 
+    {
+    console.log('Bandykite kitą kartą.');
+    }
+
+if (array[0].length <= array[1].length)
+    {
+    console.log('Pomidoras.');
+    } else 
+    {
+    console.log('Bandykite kitą kartą.');
+    }
+
+console.log('------------------------------')
+
+
+
+
+
+
 const namuDarbai = '--------------------Namu darbai paskaitos metu--------------'
 console.log(namuDarbai)
 
