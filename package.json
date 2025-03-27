@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "gabijosifai": "node --watch ./task/gifu.js",
     "digit": "node --watch ./task/digit-count.js",
     "intervalas": "node --watch ./task/inteval-sum.js",
     "multitable": "node --watch ./task/multi-table.js",
