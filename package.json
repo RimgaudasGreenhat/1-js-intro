@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "digit": "node --watch ./task/digit-count.js",
     "intervalas": "node --watch ./task/inteval-sum.js",
     "multitable": "node --watch ./task/multi-table.js",
     "for": "node --watch ./js/8-for.js",

@@ -234,3 +234,161 @@ function dalybaIsSeptyniu(start, end) {
 console.log('1)', dalybaIsSeptyniu(0, 11));
 console.log('2)', dalybaIsSeptyniu(8, 31));
 console.log('3)', dalybaIsSeptyniu(-18, 18));
+
+
+
+function stringReverse(text) 
+  {
+   let result = '';
+    for (let i = text.length - 1; i >= 0; i--)
+      {
+        result+= text[i];
+      }
+
+   return result;
+  }
+
+  console.log(stringReverse('abc'));
+  console.log(stringReverse('sula'));
+  console.log(stringReverse('sedek'));
+  console.log(stringReverse('uzu'));
+  console.log(stringReverse('sachmatai'));
+  console.log(stringReverse('saskes'));
+
+
+
+
+  function stringReverse2(text) 
+  {
+   let result = '';
+    for (let i = 0; i < text.length; i++)
+      {
+        result += text[text.length - i - 1];
+      }
+
+   return result;
+  }
+
+  console.log(stringReverse2('abc'));
+  console.log(stringReverse2('sula'));
+  console.log(stringReverse2('sedek'));
+  console.log(stringReverse2('uzu'));
+  console.log(stringReverse2('sachmatai'));
+  console.log(stringReverse2('saskes'));
+
+
+
+  function stringReverse3(text) 
+  {
+   let result = '';
+    for (let i = 0; i < text.length; i++)
+      {
+        result += text[i] + result;
+      }
+
+   return result;
+  }
+
+  console.log(stringReverse3('abc'));
+  console.log(stringReverse3('sula'));
+  console.log(stringReverse3('sedek'));
+  console.log(stringReverse3('uzu'));
+  console.log(stringReverse3('sachmatai'));
+  console.log(stringReverse3('saskes'));
+
+
+
+  function stringReverse4(text) 
+  {
+    if (typeof text !== 'string')
+      {
+        return 'Reikalinga string tipo reiksme.';
+      }
+   let result = '';
+    for (let i = 0; i < text.length; i++)
+      {
+        result += text[i] + result;
+      }
+
+   return result;
+  }
+
+  console.log(stringReverse4([]));
+  console.log(stringReverse4([1,2]));
+  console.log(stringReverse4(['asd', ,'efre']));
+  console.log(stringReverse4(145));
+  console.log(stringReverse4('sachmatai'));
+  console.log(stringReverse4('saskes'));
+
+  console.log('-----------------------------------');
+
+  function intervalCount(start, end, divider) 
+  {const trueStart = start;
+    for (let i = trueStart; i <= end; i+= divider)
+         {
+          count++
+        }
+      return `Skaičių intervale tarp ${start} ir ${end},besidalijančių be liekanos iš ${divider} yra ${count} vienetai.`;
+  }
+
+console.log (intervalCount(0,11,3));
+console.log (intervalCount(0,11,5));
+console.log (intervalCount(0,11,7));
+
+
+console.log('-----------------------------------');
+
+function intervalCount4 (start, end, divider)
+  { if (typeof start !== 'number')
+    {
+      return 'pradžioj turi būti skaičius'
+    }
+
+  }
+
+/*console.log(intervalCount(0, 11, 3));
+console.log(intervalCount(0, 11, 5));
+console.log(intervalCount(0, 11, 7));
+
+console.log(intervalCount(1, 11, 3));
+console.log(intervalCount(1, 11, 5));
+console.log(intervalCount(1, 11, 7));
+
+console.log(intervalCount('asd', 11, 7));
+console.log(intervalCount(1, 'asd', 7));
+console.log(intervalCount(1, 11, 'asd'));
+console.log(intervalCount(true, 11, 7));
+console.log(intervalCount(1, true, 7));
+console.log(intervalCount(1, 11, true));
+console.log(intervalCount(undefined, 11, 7));
+console.log(intervalCount(1, undefined, 7));
+console.log(intervalCount(1, 11, undefined));
+console.log(intervalCount(null, 11, 7));
+console.log(intervalCount(1, null, 7));
+console.log(intervalCount(1, 11, null));
+console.log(intervalCount([], 11, 7));
+console.log(intervalCount(1, [], 7));
+console.log(intervalCount(1, 11, []));
+console.log(intervalCount({}, 11, 7));
+console.log(intervalCount(1, {}, 7));
+console.log(intervalCount(1, 11, {}));
+console.log(intervalCount(intervalCount, 11, 7));
+console.log(intervalCount(1, intervalCount, 7));
+console.log(intervalCount(1, 11, intervalCount));
+
+console.log(intervalCount(0.1, 11, 7));
+console.log(intervalCount(0, 11.1, 7));
+console.log(intervalCount(0, 11, 7.1));
+
+console.log(intervalCount(NaN, 11, 7));
+console.log(intervalCount(0, NaN, 7));
+console.log(intervalCount(0, 11, NaN));
+
+console.log(intervalCount(Infinity, 11, 7));
+console.log(intervalCount(100, 11, 7));
+console.log(intervalCount(0, Infinity, 7));
+console.log(intervalCount(0, 11, Infinity));
+
+console.log(intervalCount(-Infinity, 11, 7));
+console.log(intervalCount(0, -Infinity, 7));
+console.log(intervalCount(0, 11, -Infinity));*/
