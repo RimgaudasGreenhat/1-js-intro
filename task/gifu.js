@@ -11,7 +11,7 @@ else
 
 
 const arejus = []
-if (arejus.length = 0)
+if (arejus.length === 0)
     {
         console.log('arejus yra tuscias');  // kazkodel negaunu sito log'o nors arejaus ilgis turetu buti 0 ar ne?
     }
@@ -190,14 +190,88 @@ function stacPlotis(x,y)
 {
     return x * y
 }
-if(x,y = array)
-    {
-        return array [0] * array [1]
-    }
+    
 const statIlPlo = [2,7]
 console.log(stacPlotis(2,8));
-console.log(stacPlotis(statIlPlo)); // nesigauna su arejum
+console.log(stacPlotis(statIlPlo[0], statIlPlo[1])); 
 
 console.log('---------------------------------------');
+
+
+
+function numbdiv3(skaicius)
+    {
+    if (skaicius %3 ===0)
+        {
+            return ('skaicius dalyjasi is 3-ju ir jo gauta reiksme yra ') + skaicius/3 
+        }
+        else
+        {
+            return ('kintamasis nesidalyja is 3-ju')
+        }
+    }
+
+console.log(numbdiv3(3));
+console.log(numbdiv3(9));
+console.log(numbdiv3('zuvis'));
+
+console.log('---------------------------------------');
+
+function textDef(textas)
+{
+    if (textas.startsWith('a')) //startsWith funkcija = nurodai funkcijai nuo kurios raides turi prasidet textas
+        {
+            return ('tekstas prasideda raide a')
+        }
+        else
+        {
+            return ('tekstas neprasideda raide a')
+        }
+}
+console.log(textDef('arejus'));
+console.log(textDef('baterija'));
+console.log(textDef('gaidys'));
+
+console.log('---------------------------------------');
+
+function numAverage(a,b,c)
+{
+    if (typeof a,b,c === 'string')
+        {
+            return 'Reikalingas skaicius'
+        }
+        else
+        {
+            return (a + b + c)/3
+        }
+}
+
+
+console.log(numAverage(1,2,3));
+console.log(numAverage(4,5,6));
+console.log(numAverage(-1,-10,-8));
+console.log(numAverage('9','4','5')); //// kodel cia veikia tekstiniai skaiciai nors as padariau if'a kad pagautu juos?
+
+console.log('---------------------------------------');
+
+function textoLength(textas)
+{
+    return textas.length
+}
+console.log(textoLength('skruzdeliukas'));
+console.log(textoLength('Abba'));
+
+console.log('---------------------------------------');
+
+function lineCombo(tex1,tex2)
+{
+    return tex1 + tex2
+}
+
+console.log(lineCombo('simta','kojis'));
+console.log(lineCombo('tara','konas'));
+
+
+//13-os nesupratu, kaip ifa isvest reiktu kad man funkcija surastu ar kintamasis yra tarp dvieju kitu kintamuju.
 
 

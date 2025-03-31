@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "object": "node --watch ./js/9-object.js",
+    "bigestnum": "node --watch ./task/biggest-numbers.js",
+    "gabijosforai": "node --watch ./task/gciklai.js",
     "gabijosifai": "node --watch ./task/gifu.js",
     "digit": "node --watch ./task/digit-count.js",
     "intervalas": "node --watch ./task/inteval-sum.js",

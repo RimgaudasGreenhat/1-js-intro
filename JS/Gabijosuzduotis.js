@@ -45,7 +45,7 @@ function PotencialusFilmai (Filmas)
     {
 console.log('Dominantys Filmas: ' + Filmas[0]);
 let norimasfilmas = 0 + Filmas[2];
-    if(Filmas[2] >= norimasIvertinimas || Filmas [1] === norimasFilmoZanras)
+    if(Filmas[2] >= norimasIvertinimas && Filmas[1] === norimasFilmoZanras)
     {
     console.log(Filmas[0] + ' ' + 'Tau gali patikti, jo ivertinimas yra:' + ' ' + Filmas[2])
     }
