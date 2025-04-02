@@ -146,6 +146,19 @@ console.log(summer3);
 const cloud = 'debeselis'.replace('ebe', '***');
 console.log(cloud);
 
+const template = 'VARDAS ejo i parduotuve pirkti DAIKTAS.';
+const name = 'Jonas';
+const item = 'pomidoras';
+
+const shop = template.replace('VARDAS', name).replace('DAIKTAS', item);
+
+console.log(shop);
+
+const template2 = 'Klaseje sedi: V1, V2, V3, V4.';
+const classmates = template2.replace('V4', 'Ona').replace('V1', 'Jonas').replace('V2', 'Maryte').replace('V3', 'Petras');
+
+console.log(classmates);
+
 
 // replaceAll
 
@@ -169,7 +182,7 @@ console.log('\ntoUpperCase');
 console.log('labas'.toUpperCase());
 console.log('Labas'.toUpperCase());
 console.log('LABAS'.toUpperCase());
-
+console.log('5rg84 sf1s25r; 4s52af548sd'.toUpperCase());
 
 
 // toLowerCase
@@ -179,7 +192,7 @@ console.log('\ntoLowerCase');
 console.log('labas'.toLowerCase());
 console.log('Labas'.toLowerCase());
 console.log('LABAS'.toLowerCase());
-
+console.log('A5RGTS 841G5FF26; A5S4GS5G4'.toLowerCase());
 
 // slice
 
@@ -204,6 +217,122 @@ console.log('pomidoras'.slice(3, -3));
 console.log('pomidoras'.slice(-4));
 console.log('pomidoras'.slice(-6, -2));
 console.log('pomidoras'.slice(-2, -6));
+
+
+// trim
+
+console.log('\ntrim');
+
+console.log(`"${'pomidoras'.trim()}"`);
+console.log(`"${'   pomidoras'.trim()}"`);
+console.log(`"${'pomidoras        '.trim()}"`);
+console.log(`"${'       pomidoras       '.trim()}"`);
+console.log(`"${'    labas     rytas     Lietuva!'.trim()}"`);
+
+console.log(`"${'    labas     rytas     Lietuva!'.trimEnd()}"`);
+console.log(`"${'    labas     rytas     Lietuva!'.trimStart()}"`);
+
+
+// split
+
+console.log('\nsplit');
+
+const t1 = 'zodis';
+const t1Parts = t1.split();
+const t1Parts2 = t1.split('o');
+const t1Parts3 = t1.split('d');
+
+
+const t2 = 'kultivatorius';
+const t2Parts = t2.split('t');
+
+console.log(t1Parts);
+console.log(t2Parts);
+
+const t3 = 'Labas rytas Lietuva';
+const t3Parts = t3.split(' ');
+
+console.log(t3Parts);
+
+console.log('duona'.split('o'));
+console.log('duona'.split('u'));
+console.log('duona'.split('d'));
+console.log('duona'.split('n'));
+console.log('duona'.split('a'));
+
+console.log('ana'.split('a'));
+
+console.log('vasara'.split('a'));
+console.log('vasara'.split(''));
+console.log(' '.split(''));
+console.log(''.split(''));
+
+
+
+const t4 = 'Labas. Ka tu. Ka tu veiki.';
+const sentenceCount = t4.split('.').length - 1;
+
+console.log(sentenceCount);
+
+
+console.log('pomidoras'.split('dor'));
+console.log('ananasas'.split('na'));
+
+
+// charCodeAt
+
+console.log('\ncharCodeAt');
+
+console.log('A'.charCodeAt(0));
+console.log('a'.charCodeAt(0));
+
+if ('A' > 'a')
+    {
+        console.log('daugiau');
+    }
+    else
+    {
+        console.log('maziau'); 
+    }
+
+
+
+    if ('labas' > 'iki')
+        {
+            console.log('daugiau');
+        }
+        else
+        {
+            console.log('maziau'); 
+        }
+
+        if ('labas' > 'labai')
+            {
+                console.log('daugiau');
+            }
+            else
+            {
+                console.log('maziau'); 
+            }
+    
+const s1 = String.fromCharCode(260);
+console.log(s1);
+
+const s2 = String.fromCharCode(26000);
+console.log(s2);
+
+const s3 = String.fromCharCode(9845);
+console.log(s3);
+
+const s4 = String.fromCharCode(2600);
+console.log(s4);
+
+
+
+
+
+
+
 
 
 
