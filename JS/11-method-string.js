@@ -101,6 +101,118 @@ console.log(k.indexOf('e'));
 console.log(k.indexOf('e', k.indexOf('e') + 1));
 
 
+// repeat
+
+console.log('\nrepeat');
+console.log('a');
+console.log('a.'.repeat(5));
+
+const symbol = 'labas';
+const megaSymbol = symbol.repeat(10);
+console.log(symbol);
+console.log(megaSymbol);
+
+
+
+function stringRepeat(text, count)
+{
+    let result = '';
+
+    for(let i = 0; i < count; i++)
+        {
+            result += text;
+        }
+        return result;
+}
+
+console.log(stringRepeat('rikiki',3));
+console.log(stringRepeat('apči',4));
+
+// replace
+
+console.log('\nreplace');
+console.log('vasara');
+
+const summer = 'vasara.'.replace('a', '-').replace('a', '-');
+console.log(summer);
+
+const summer2 = 'vasara.'.replace('a', '-');
+console.log(summer2);
+
+const summer3 = 'vasara.'.replace('a', '-').replace('a', '-').replace('a', '-');
+console.log(summer3);
+
+
+const cloud = 'debeselis'.replace('ebe', '***');
+console.log(cloud);
+
+
+// replaceAll
+
+console.log('\nreplaceAll');
+
+console.log('vasara');
+console.log('vasara'.replaceAll('a', '-'));
+
+console.log('ananasas'.replace('a', ''));
+console.log('ananasas'.replaceAll('a', ''));
+console.log('ananasas'.replaceAll('na', ''));
+
+const hi = 'Labas rytas, Lietuva!';
+const hiNormalSize = hi.replaceAll(' ', '').length;
+
+
+// toUpperCase
+
+console.log('\ntoUpperCase');
+
+console.log('labas'.toUpperCase());
+console.log('Labas'.toUpperCase());
+console.log('LABAS'.toUpperCase());
+
+
+
+// toLowerCase
+
+console.log('\ntoLowerCase');
+
+console.log('labas'.toLowerCase());
+console.log('Labas'.toLowerCase());
+console.log('LABAS'.toLowerCase());
+
+
+// slice
+
+console.log('\nslice');
+
+console.log('pomidoras'.slice());
+console.log('pomidoras'.slice(0));
+console.log('pomidoras'.slice(1));
+console.log('pomidoras'.slice(2));
+console.log('pomidoras'.slice(3));
+
+console.log('pomidoras'.slice(0, 1));
+console.log('pomidoras'.slice(0, 2));
+console.log('pomidoras'.slice(0, 3));
+console.log('pomidoras'.slice(1, 3));
+
+console.log('pomidoras'.slice(0, -1));
+console.log('pomidoras'.slice(0, -2));
+console.log('pomidoras'.slice(0, -3));
+console.log('pomidoras'.slice(3, -3));
+
+console.log('pomidoras'.slice(-4));
+console.log('pomidoras'.slice(-6, -2));
+console.log('pomidoras'.slice(-2, -6));
+
+
+
+
+
+
+
+
+
 
 
 
