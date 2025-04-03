@@ -56,7 +56,7 @@ console.log(upperCaseName);
 const n1 = [1, 11, 111];
 const n2 = [2, 22, 222, 2222];
 const n12 = [];
-
+// const n12 = [1, 11, 111, 2, 22, 222, 2222];
 
 for (let i=0; i<n1.length;i++)
     {
