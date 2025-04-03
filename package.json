@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "method:number": "node --watch ./js/12-method-number.js",
     "wtf": "node --watch ./codewarsai/wtf.js",
     "vardas": "node --watch ./task/valid-name.js",
     "method:string": "node --watch ./js/11-method-string.js",

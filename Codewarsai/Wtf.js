@@ -3,7 +3,7 @@
 
 function positiveSum(Array) 
 {
- let suma = 0;
+  let suma = 0;
  {
    for (let i = 0; i < Array.length; i++)
    {
@@ -12,13 +12,14 @@ function positiveSum(Array)
        suma += Array[i];
        
      }
-       return suma;
+     {
+      return suma
+     }
    }
  } 
 }
 
-const skaiciai = [1, -4, 7, 12];
-console.log(positiveSum(skaiciai)); // kodel nesigauna susumuot tik teigiamu skaiciu atrodo kad tik pasiema vieneta ir viskas ciklas baigtas
+console.log(positiveSum[1, -4, 7, 12]); // kodel nesigauna susumuot tik undefined meta.
 
 
 
