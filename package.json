@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "moneyformat": "node --watch ./task/money-format.js",
     "method:number": "node --watch ./js/12-method-number.js",
     "wtf": "node --watch ./codewarsai/wtf.js",
     "vardas": "node --watch ./task/valid-name.js",
