@@ -107,4 +107,170 @@ function FilmuIsrinkimas (filmasA, filmasB, filmasC, balas, zanras)
 
 FilmuIsrinkimas(Filmas6, Filmas8, Filmas10, norimasIvertinimas1, norimasFilmoZanras1)
 
+console.clear();
+
+
+// 2 uzduotis isvesti sveikuosius skaicius grafiskai
+let u1 = 0
+let u2 = 0
+let u3 = 0
+let u4 = 0
+function teigSkaiciai(skaiciai)
+{
+    for (let i=0; i< skaiciai.length; i++)
+        {
+            if (skaiciai[i] = 1)
+                {
+                    u1 ++ 
+                } 
+                if(skaiciai[i] = 2)
+                    {
+                        u2 ++
+                    }
+                    if(skaiciai[i] = 3)
+                        {
+                            u3 ++
+                        }
+                        if(skaiciai[i] = 2)
+                            {
+                                u4 ++
+                            } return u1, u2, u3, u4
+        }
+}
+
+console.log('------------------');
+
+const e = [1, 1, 1, 2, 3, 3, 3, 4];
+console.log(teigSkaiciai(e));
+/*bandziau tesiog pasidaryt kad isvestu kiek yra tam tikru skaiciu, bet nepaeina kazkakas negerai ir nesuprantu kur yra klaida logikoj*/
+
+
+
+
+//3 uzduotis temperaturos
+
+const japan = [5, 6, 4, 8, 7, 6, 4]
+const italy = [11, 13, 16, 14, 15, 17, 10]
+const spain = [18, 17, 19, 22, 23, 25, 19]
+const antarctica = [-30, -41, -35, -37, -28, -27, -19]
+const alabama = [10, 12, 11, 16, 17, 15, 19]
+const germany = [8, 6, 11, 7, 8, 3, 1]
+const ukraine = [4, 5, 3, 6, 1, 10, 11]
+
+function tempAverage(day)
+{
+    return (japan[day - 1] + italy[day - 1] + spain[day - 1] + antarctica[day - 1] + alabama[day - 1] + germany[day - 1] + ukraine[day - 1])/ 7;
+}
+console.log(tempAverage(1));
+console.log(tempAverage(4));
+
+
+
+function tempDidziausia(miestas)
+{   let didziausiaTemp = miestas[0];
+   for(i = 0; i < miestas.length; i++)
+    {
+        if(miestas[i] > didziausiaTemp)
+            {
+                didziausiaTemp = miestas[i]; /// kazkodel neupdatina man didziausios temperaturos tesiog issima pirma arejaus reiksme ir viskas wtf? gaunu tesiog 18
+            }
+          
+    } return didziausiaTemp;
+}
+console.log(tempDidziausia(spain));
+
+
+
+function tempMaziausia(miestas)
+{   let maziausiaTemp = miestas[0];
+   for(i = 0; i < miestas.length; i++)
+    {
+        if(miestas[i] < maziausiaTemp)
+            {
+                maziausiaTemp = miestas[i]; 
+            }
+          
+    } return maziausiaTemp
+}
+console.log(tempMaziausia(spain));
+
+
+
+console.log('------------------');
+
+
+function biggestLowestTemp(miestas)
+{   let didziausiaTemp = miestas[0];
+    let maziausiaTemp = miestas[0];
+    let savaitesDienaBig = miestas[0];
+    let savaitesDienaSmal = miestas[0];
+    for(i = 0; i < miestas.length; i++)
+     {
+         if(miestas[i] > didziausiaTemp)
+             {
+                 didziausiaTemp = miestas[i] 
+             }
+             if(miestas[i] < maziausiaTemp)
+                {
+                    maziausiaTemp = miestas[i]; /// cia jau per sunkiai pasidariau nes netaip supratau uzduoti, dabar reiktu man prisiskirt indexus prie kekvienos temperaturos ir juos isvers
+                }
+                if (miestas[i] > savaitesDienaBig)
+                    {
+                        savaitesDienaBig =  (i-1) 
+                    } 
+                    if (miestas[i] < savaitesDienaSmal)
+                        {
+                            savaitesDienaSmal =  (i+1)
+                        }
+           
+     } return [didziausiaTemp, savaitesDienaBig, maziausiaTemp, savaitesDienaSmal];
+      
+ }
+ console.log(biggestLowestTemp(spain));
+ console.log(biggestLowestTemp(japan));
+ 
+
+
+
+function tempWeekAverage(miestas)
+{
+    return (miestas[0] + miestas[1] + miestas[2] + miestas[3] + miestas[4] + miestas[5] + miestas[6])/ 7;
+}
+console.log(tempWeekAverage(spain));
+console.log(tempWeekAverage(japan));
+
+
+console.log('------------------');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
