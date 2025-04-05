@@ -21,9 +21,26 @@ function positiveSum(Array)
 
 console.log(positiveSum[1, -4, 7, 12]); // kodel nesigauna susumuot tik undefined meta.
 
+// sintaksei buvo klaidų už tai ir nesigavo man ten smh va teisingai išspręstas mano uždavinys
 
 
+function positiveSum1(skaiciai)
+{ let suma = 0;  
+  
+  for(i = 0; i < skaiciai.length; i++)
+  {
+    if (skaiciai[i] >= 0)
+    {
+      suma += skaiciai[i];
+    }
+  }return suma
+} 
 
+
+/// geriau išspręstas uždavinys
+
+
+const positiveSum12 = arr => arr.reduce((sum, n) => n > 0 ? sum + n : sum, 0) /// Interesting verry interesting.
 
 
 
@@ -140,5 +157,29 @@ console.log('----------');
 
 
 
+//Will you make it?
 
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => 
+  {
+    if(distanceToPump <= mpg * fuelLeft)
+    {
+      return true
+    }
+    else
+    {
+      return false
+    }
+  };
+  
+  console.log(50,25,2)
+  console.log(100,50,1)/// idk tesiog logiskai truputi pagalvojau ir isprendziau pretty easy ngl bet.....
+
+
+
+  // tikrai yra geriau išspręstas šis uždavinys:
+
+
+  const zeroFuel1 = (distanceToPump, mpg, fuelLeft) => {
+    return distanceToPump/mpg <= fuelLeft
+  };// cool viskas taip talpiai surašyta.
 
