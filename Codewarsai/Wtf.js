@@ -183,3 +183,105 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) =>
     return distanceToPump/mpg <= fuelLeft
   };// cool viskas taip talpiai surašyta.
 
+
+
+
+
+
+
+  //Find the Difference in Age between Oldest and Youngest Family Members 
+  function differenceInAges(ages){
+    let biggestAge = ages[0];
+    let smallestAge = ages[0];
+    for(i = 0; i < ages.length; i++)
+    {
+      if (ages[i] > biggestAge)
+      {
+        biggestAge = ages[i];
+      }
+      if (ages[i] < smallestAge)
+      {
+        smallestAge = ages[i]
+      } difference1 = biggestAge - smallestAge; 
+    } return [smallestAge, biggestAge, difference1]
+  }
+  console.log(differenceInAges([82, 15, 6, 38, 35]));
+
+// kitas sprendimo būdas
+function differenceInAges1 (ages1) {
+
+  let max = Math.max(...ages1),
+      min = Math.min(...ages1)
+      diff = max - min
+      
+  return [min, max, diff]
+}
+  console.log(differenceInAges1([82, 15, 6, 38, 35]));
+
+
+
+  // Is he gonna survive?
+
+  function hero(bullets, dragons)
+{
+  if(bullets >= dragons * 2)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+console.log(hero(10,5));
+console.log(hero(7,4));
+console.log(hero(4,5));
+console.log(hero(100,40));
+console.log(hero(1500,751));
+console.log(hero(0,1));
+
+//kitas sprendimo būdas
+
+function hero(bullets, dragons){ // rodyklinė funkcija kurią ejom šiandien make sence kadangi yra viena salyga
+  return bullets >= dragons * 2
+}
+
+
+
+function getDrinkByProfession(param)
+{
+  return param.split(' ').map(word => {return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();})
+  .join(' ');
+}
+console.log(getDrinkByProfession('scHOOl counselor'))
+
+
+
+
+
+function getDrinkByProfession1(param1)
+{if (param1 === "Jabroni")
+  {
+    return "Patron Tequila";
+  }
+}
+  console.log(getDrinkByProfession1("jabrOni")) /// nesigauna plius dar nezinau kaip reiktų man tuos pataisymus padaryt kad neteisingai parasytus zodzius parasytu arba uzfiksuotu kaip teisingai parasytus zodzius
+
+
+
+  //You Can't Code Under Pressure #1
+
+
+  function doubleInteger(i) {
+    i = i * 2
+    return i;
+  }
+  console.log(doubleInteger(2))
+
+
+  //kitas sprendimo būdas
+
+  function doubleInteger(i) 
+  {
+    return i * 2;
+  }
