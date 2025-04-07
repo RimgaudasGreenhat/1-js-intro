@@ -72,3 +72,81 @@ for (let i=0; i<n1.length;i++)
 console.log(n12);
 
 
+
+const numbers2 = [10, 2, 8, 4, 6];
+console.log(numbers2);
+
+numbers2.push(9);
+console.log(numbers2);
+
+const g1 = numbers2.pop();
+const g2 = numbers2.pop();
+console.log(numbers2, g1, g2);
+
+numbers2.unshift(1);
+numbers2.unshift(2);
+numbers2.unshift(3);
+console.log(numbers2);
+
+const g3 = numbers2.shift();
+const g4 = numbers2.shift();
+console.log(numbers2, g3, g4);
+
+console.clear();
+
+//              0   1   2   3   4
+const magic = [11, 22, 33, 44, 55];
+
+console.log(magic.includes(5));
+console.log(magic.includes(55));
+
+console.log(magic.indexOf(5));
+console.log(magic.indexOf(55));
+
+const texts = ['agurkas', 'pomidoras', 'svogunas', 'paprika'];
+
+// Reikalingi produktai: a, b, c, d.
+const products = `Reikalingi produktai: ${texts.join(', ')}.`;
+console.log(products);
+
+console.clear();
+
+console.log(texts);
+texts.reverse();
+console.log(texts);
+texts.reverse();
+console.log(texts);
+
+
+console.clear();
+
+const c1 = [1, 11];
+const c2 = [2, 22];
+const c3 = [3, 33];
+const c4 = [4, 44];
+
+const c12 = c1.concat(c2);
+console.log(c12);
+
+const c34 = c3.concat(c4);
+console.log(c34);
+
+const c123 = c1.concat(c2).concat(c3);
+console.log(c123);
+
+const c1234 = c1.concat(c2, c3, c4);
+console.log(c1234);
+
+const c111 = c1.concat(c1, c1);
+console.log(c111);
+
+console.clear();
+
+//          0   1   2   3   4
+const h = [11, 22, 33, 44, 55];
+console.log(h);
+
+h.splice(1, 2);
+console.log(h);
+
+
