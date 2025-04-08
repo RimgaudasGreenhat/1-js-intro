@@ -285,3 +285,99 @@ function getDrinkByProfession1(param1)
   {
     return i * 2;
   }
+
+
+
+///Triple Trouble
+
+  function tripleTrouble(one, two, three)
+  {
+    let zodis = '';
+    let zodziuIlgis = Math.max(one.length, two.length, three.length);
+    for (let i = 0; i < zodziuIlgis; i++)
+    {
+      zodis += one[i] + two[i] + three[i]; 
+    }
+    return zodis
+  }
+  console.log(tripleTrouble("aaa","bbb","ccc"));
+  console.log(tripleTrouble("aaaaaa","bbbbbb","cccccc"));
+  console.log(tripleTrouble("burn", "reds", "roll"));
+  console.log(tripleTrouble("Sea","urn","pms"));
+
+
+
+  //geriau išsprestas uzdavinys
+
+
+  const tripleTrouble2 = (one, two, three) => one.split("").map((letter, index) => letter + two[index] + three[index]).join("");
+
+  //arba
+
+  function tripleTrouble3(one, two, three){
+    let x = ''
+      for(i = 0; i<one.length; i++) {
+        x +=  one[i] + two[i] + three[i]
+      }
+    return x
+   }
+
+
+
+
+//Blue marbles
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled)
+{
+  let kamuoliukuKiekis = (blueStart - bluePulled) + (redStart - redPulled);
+  let raudonuKamuoliukukiekis = redStart - redPulled;
+  const istraukimoTikimybe = (1 - (raudonuKamuoliukukiekis * (1/kamuoliukuKiekis)));
+  return istraukimoTikimybe.toFixed(1)
+} 
+
+
+console.log(guessBlue(5, 5, 2, 3)); 
+console.log(guessBlue(5, 7, 4, 3));
+console.log(guessBlue(12, 18, 4, 6)); /// neprema, raso kad gauna '0.6' vietoj tesiog 0.6 reik gabijos pagalbos
+
+
+
+
+//Beginner Series #2 Clock
+
+function past(h, m, s){
+  return h * 3600000 + m * 60000  + s * 1000;
+}
+
+
+//kitas sprendimo budas
+
+function past(h, m, s){
+  return ((h*3600)+(m*60)+s)*1000;
+}
+ //arba
+
+ const past = (h,m,s) => 1000 * (3600 * h + 60 * m + s);
+
+// Grasshopper - Summation
+
+var summation = function (num) 
+{let sum = 0
+  for (let i = 1; i <= num; i++)
+  {
+    sum += i; // užtenka tik tiek kad prisidėtų prie savęs be jokių if'ų ten kai dariau prieš tai
+  }return sum
+ 
+}
+console.log(summation(1));
+console.log(summation(2));
+console.log(summation(8));
+
+
+//kiti sprendimo būdai
+const summation = n => n * (n + 1) / 2; // wow
+
+// arba
+function summation(num) {
+  return num * (num + 1) / 2
+}
