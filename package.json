@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "tritaskis": "node --watch ./js/21-destruktizavimas-rest.js",
+    "reduce": "node --watch ./js/20-reduce.js",
+    "sortas": "node --watch ./js/19-sort.js",
     "for-in": "node --watch ./js/18-for-in.js",
     "while": "node --watch ./js/17-while.js",
     "for-of": "node --watch ./js/16-for-of.js",

@@ -332,13 +332,15 @@ function guessBlue(blueStart, redStart, bluePulled, redPulled)
   let kamuoliukuKiekis = (blueStart - bluePulled) + (redStart - redPulled);
   let raudonuKamuoliukukiekis = redStart - redPulled;
   const istraukimoTikimybe = (1 - (raudonuKamuoliukukiekis * (1/kamuoliukuKiekis)));
-  return istraukimoTikimybe.toFixed(1)
+  return parseFloat(istraukimoTikimybe.toFixed(1))
 } 
 
 
 console.log(guessBlue(5, 5, 2, 3)); 
 console.log(guessBlue(5, 7, 4, 3));
-console.log(guessBlue(12, 18, 4, 6)); /// neprema, raso kad gauna '0.6' vietoj tesiog 0.6 reik gabijos pagalbos
+console.log(guessBlue(12, 18, 4, 6)); /// visus pradinius 6 testus pereina, bet kitu nepereina, reiks gabijos pagalbos.
+// kitas sprendimo būdas
+
 
 
 
@@ -381,3 +383,130 @@ const summation = n => n * (n + 1) / 2; // wow
 function summation(num) {
   return num * (num + 1) / 2
 }
+
+
+//Keep Hydrated
+
+function litres(time) 
+{
+  return Math.floor(time* 0.5); //Math.floor'o reikia kadangi pati salyga prašo išgertų litrų reikšmę suapvalinti į mažesnę pusę
+}
+
+
+//kitas sprendimo būdas
+
+const litres1 = time1 => Math.floor(time1 * 0.5);
+
+
+
+
+//Calculate the number of magazines
+
+
+function magNumber(info)
+{
+  let mag = 0
+  if (info[0] === "PT92")
+  {
+      mag = Math.ceil((3 * info[1])/17);
+  }
+   if (info[0] === "M4A1" || info[0] === "M16A2" )
+  {
+      mag = Math.ceil((3 * info[1])/30);
+  }
+    if (info[0] === "PSG1")
+  {
+      mag = Math.ceil((3 * info[1])/5);
+  }
+    return mag;
+}
+
+
+//kitas sprendimo būdas (nepublishintas sitas buvo tai dar nieko nera sad:()
+
+
+
+
+//Calculate BMI
+
+
+function bmi(weight, height) 
+{
+  let kunoMase = '';
+  if (weight/(height **2) <= 18.5)
+  {
+    kunoMase = "Underweight"
+  }
+   else if (weight/(height **2) <= 25.0)
+  {
+    kunoMase = "Normal"
+  }
+  else if (weight/(height **2) <= 30.0)
+  {
+    kunoMase = "Overweight"
+  }
+   else
+  {
+    kunoMase = "Obese"
+  }
+    return kunoMase
+}
+
+
+//kitas sprendimo budas
+const bmi = (w, h, bmi = w/h/h) =>  bmi <= 18.5 ? "Underweight" : //damn
+                                    bmi <= 25 ? "Normal" :
+                                    bmi <= 30 ? "Overweight" : "Obese";
+
+
+
+//Drink about
+
+
+function peopleWithAgeDrink(old) 
+{
+  if (old < 14)
+  {
+    return  'drink toddy'
+  }
+  else if (old < 18)
+  {
+    return  'drink coke'
+  }
+  else if (old < 21)
+  {
+    return  'drink beer'
+  }
+  else 
+  {
+    return  'drink whisky'
+  }
+};
+
+
+// kitas sprendimo būdas
+
+const peopleWithAgeDrink = (age) =>
+  age < 14 ? "drink toddy" :
+  age < 18 ? "drink coke" :
+  age < 21 ? "drink beer" : "drink whisky" // WOW
+
+
+
+
+  //Function 2 - squaring an argument
+
+
+  function square (num)// daugiau tokių uždavinių XD
+{
+  return num*num;
+}
+
+
+//kiti sprendimo būdai
+
+const square = (n) => n * n;
+
+
+
+
