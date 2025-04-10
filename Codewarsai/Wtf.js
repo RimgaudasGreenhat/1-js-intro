@@ -354,12 +354,12 @@ function past(h, m, s){
 
 //kitas sprendimo budas
 
-function past(h, m, s){
+function past1(h, m, s){
   return ((h*3600)+(m*60)+s)*1000;
 }
  //arba
 
- const past = (h,m,s) => 1000 * (3600 * h + 60 * m + s);
+ const past2 = (h,m,s) => 1000 * (3600 * h + 60 * m + s);
 
 // Grasshopper - Summation
 
@@ -377,10 +377,10 @@ console.log(summation(8));
 
 
 //kiti sprendimo būdai
-const summation = n => n * (n + 1) / 2; // wow
+const summation1 = n => n * (n + 1) / 2; // wow
 
 // arba
-function summation(num) {
+function summation2(num) {
   return num * (num + 1) / 2
 }
 
@@ -454,7 +454,7 @@ function bmi(weight, height)
 
 
 //kitas sprendimo budas
-const bmi = (w, h, bmi = w/h/h) =>  bmi <= 18.5 ? "Underweight" : //damn
+const bmi1 = (w, h, bmi = w/h/h) =>  bmi <= 18.5 ? "Underweight" : //damn
                                     bmi <= 25 ? "Normal" :
                                     bmi <= 30 ? "Overweight" : "Obese";
 
@@ -486,7 +486,7 @@ function peopleWithAgeDrink(old)
 
 // kitas sprendimo būdas
 
-const peopleWithAgeDrink = (age) =>
+const peopleWithAgeDrink1 = (age) =>
   age < 14 ? "drink toddy" :
   age < 18 ? "drink coke" :
   age < 21 ? "drink beer" : "drink whisky" // WOW
@@ -505,8 +505,151 @@ const peopleWithAgeDrink = (age) =>
 
 //kiti sprendimo būdai
 
-const square = (n) => n * n;
+const square1 = (n) => n * n;
 
 
 
 
+//Opposite number
+
+function opposite(number) 
+{
+  return -number
+}
+
+
+//kiti sprendimo metodai
+
+function opposite(number) {
+  /* Now this is the story all about how
+      My life got flipped, turned upside down
+      And I'd like to take a minute just sit right there
+      I'll tell you how I became the prince of a town called Bel-air
+      
+      In west Philadelphia born and raised
+      On the playground where I spent most of my days
+      Chilling out, maxing, relaxing all cool
+      And all shooting some b-ball outside of the school
+      When a couple of guys, they were up to no good
+      Started making trouble in my neighbourhood
+      I got in one little fight and my mom got scared
+      And said "You're moving with your auntie and uncle in Bel-air" (absolute cinema!!! \o/)
+      
+      I whistled for a cab and when it came near the
+      License plate said "fresh" and had a dice in the mirror
+      If anything I could say that this cab was rare
+      But I thought nah, forget it, yo homes to Bel-air!
+      
+      I pulled up to a house about seven or eight
+      And I yelled to the cabby "Yo, homes smell you later!"
+      Looked at my kingdom I was finally there
+      To sit on my throne as the prince of Bel-air */
+  return -number;
+}
+
+//arba
+
+const opposite1 = number => -number;
+
+
+// Area or Perimeter
+
+const areaOrPerimeter = function(l , w) //dumb ass uždavinys kvadrato perimetro pavizdys parašytas neteisingai (3,3 turi gautis 9, nors iš tiesų turi gautis 12 kadangi kvadratas turi ketures puses ne 3?) ( ką jis/ji skaičiavo?) 
+{
+    return (l*2) + (w*2)
+};
+
+
+
+//Century From Year
+
+function century(year) 
+{
+  return Math.ceil(year/100)
+}
+
+
+//kitas sprendimo būdas
+
+function century(year) {
+  return (year + 99) / 100 | 0;
+}
+
+
+//arba
+
+const century1 = year => Math.ceil(year/100)
+
+
+
+//counting sheep
+
+function countSheeps(sheep) //nesigauna sudėti sheep'ų 
+{
+  if (sheep === true)
+    {
+      sheep ++;
+  return [sheep];
+    } else
+    {
+      return 0
+    }
+}
+
+
+
+//Will there be enough space?
+
+function enough(cap, on, wait) 
+{ let left = (cap - on) - wait
+  if(left > 0)
+  {
+    left = 0
+    return left /// reik nepamiršt šito return'o parašyt, nes be jo man taip ir mes 'unedentified' :)
+  } else
+  {
+    return Math.abs(left)
+  }
+}
+console.log(enough(20, 5, 5));
+
+//kitas sprendimo būdas
+
+function enough1(cap, on, wait) {
+  return Math.max(wait + on - cap, 0); // geras taip išeina tesiog jei po klablelio parašai 0 tai ir gražins jį jei salygą tenkins?
+}
+
+
+//Reversed Words
+
+function reverseWords(str){
+  return str.split(' ').reverse().join(' '); //šitą reikia prisimint, nes užtrukau kol suradau blemba :/
+}
+
+
+// kitas sprendimo būdas
+const reverseWords = (str) => str.split(" ").reverse().join(" ");
+
+
+
+//Add Length
+
+function addLength(str)
+{
+  return str.split(" ").map(word => `${word} ${word.length}`);// išsplitinam išpradžių žodžius stringe, kad gautusi atskiri žodžiai arėjuje ir poto pasidarome kintamajį 'word' kuris yra = tas žodis + jo ilgis.
+}
+console.log(addLength('apple ban'));
+
+
+//kitas sprendimo būdas
+
+function addLength(str) {
+  const words = str.split(" ") // kiek negražėsnis būdas, bet gal labiau suprantamas man asmeniškai perskaičius
+  let result = [ ]
+ for (const word of words){ 
+   result.push(word +" " + word.length)
+ } 
+ 
+return result
+   
+}

@@ -92,7 +92,7 @@ const g3 = numbers2.shift();
 const g4 = numbers2.shift();
 console.log(numbers2, g3, g4);
 
-console.clear();
+
 
 //              0   1   2   3   4
 const magic = [11, 22, 33, 44, 55];
@@ -109,7 +109,7 @@ const texts = ['agurkas', 'pomidoras', 'svogunas', 'paprika'];
 const products = `Reikalingi produktai: ${texts.join(', ')}.`;
 console.log(products);
 
-console.clear();
+
 
 console.log(texts);
 texts.reverse();
@@ -118,7 +118,7 @@ texts.reverse();
 console.log(texts);
 
 
-console.clear();
+
 
 const c1 = [1, 11];
 const c2 = [2, 22];
@@ -140,7 +140,7 @@ console.log(c1234);
 const c111 = c1.concat(c1, c1);
 console.log(c111);
 
-console.clear();
+
 
 //          0   1   2   3   4
 const h = [11, 22, 33, 44, 55];
@@ -211,7 +211,7 @@ const peopleMarried = people.map(person => {
 });
 console.log(peopleMarried);
 
-console.clear();
+
 
 // FILTER
 const p = [10, 2, 8, 4, 6];
@@ -267,7 +267,7 @@ console.log(demo);
 demo.fill(777);
 console.log(demo);
 
-console.clear();
+
 // every
 const trees = ['uosis', 'egle', 'azuolas', 'tuopa'];
 const allTreesValid = trees.every(s => s.length > 0);
