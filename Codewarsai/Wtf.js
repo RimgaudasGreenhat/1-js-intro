@@ -45,21 +45,30 @@ const positiveSum12 = arr => arr.reduce((sum, n) => n > 0 ? sum + n : sum, 0) //
 
 
 //arraymadness
+function arrayMadness(a, b) {
+  let firstArray = 0
+  let secondArray = 0
+    for (let i = 0; i < a.length; i++) { /// pasirodo čia reikėjo for ciklo, nebandyt praslyst be jo kaip bandžiau :D
+      firstArray+= a[i]**2
+    }
+    
+    for(let i = 0; i < b.length; i++) {
+      secondArray += b[i]**3
+    }
+    
+    return firstArray > secondArray
+  }
+
+
+
+// kitas išsprendimo būdas
 function arrayMadness(a, b)
 {
-  a = (a[0] ** 2 + a[1] **2 + a [2] **2);
-  b = (b[0] ** 3 + b[1] **3 + b [2] **3);
-  if (a > b)
-  {
-    console.log('true');
-    
-  } else if (a < b)
-  {
-    console.log('false')
-  }
+  const sumOfSquares = a.reduce((sum, num) => sum + num ** 2, 0);
+  const sumOfCubes = b.reduce((sum, num) => sum + num ** 3, 0);
+  return sumOfSquares > sumOfCubes;
 }
 
-console.log(arrayMadness([4, 5, 6], [1, 2, 3]));/// nezinau kur undefined meta
 
 
 
@@ -582,22 +591,6 @@ const century1 = year => Math.ceil(year/100)
 
 
 
-//counting sheep
-
-function countSheeps(sheep) //nesigauna sudėti sheep'ų 
-{
-  if (sheep === true)
-    {
-      sheep ++;
-  return [sheep];
-    } else
-    {
-      return 0
-    }
-}
-
-
-
 //Will there be enough space?
 
 function enough(cap, on, wait) 
@@ -628,7 +621,7 @@ function reverseWords(str){
 
 
 // kitas sprendimo būdas
-const reverseWords = (str) => str.split(" ").reverse().join(" ");
+const reverseWords1 = (str) => str.split(" ").reverse().join(" ");
 
 
 
@@ -643,7 +636,7 @@ console.log(addLength('apple ban'));
 
 //kitas sprendimo būdas
 
-function addLength(str) {
+function addLength1(str) {
   const words = str.split(" ") // kiek negražėsnis būdas, bet gal labiau suprantamas man asmeniškai perskaičius
   let result = [ ]
  for (const word of words){ 
@@ -653,3 +646,197 @@ function addLength(str) {
 return result
    
 }
+
+
+
+//Counting sheep...
+
+function countSheeps(sheep)
+{ let sheeps = 0;
+
+  for (let i = 0; i < sheep.length; i++) 
+      if (sheep[i] == true)
+        sheeps ++;
+
+        return sheeps;
+}
+
+
+
+//kitas sprendimo budas
+
+function countSheeps1(sheep)
+{
+  return sheep.filter(Boolean).length
+}
+
+
+
+//Difference of Volumes of Cuboids
+
+function findDifference(a, b) 
+{
+  return Math.abs((a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2])) //reik nepamiršt papildomų skliaustelių Math.abs funkcijai, kitaip nepadarys atsakymo kaip pozityvaus skaičiaus :)
+}
+
+
+// kitas sprendimo būdas
+
+function find_difference1([a,b,c], [d,e,f]) {
+  return Math.abs(a*b*c-d*e*f)
+}
+
+
+
+//Third Angle of a Triangle I mean...
+
+function otherAngle(a, b) { // aš niekas nedraugavau su geometrija bet netgi aš žinau šitą :D
+  return 180 - a - b
+}
+
+
+//kiti sprendimo būdai
+
+
+function otherAngle1(a, b) {
+  if(a<0 || b<0) //ensure no negative angles
+    return 0;
+  if((a+b)>=180) //ensure 2 angles don't sum up to 180 // basically apsaugos nuo nesamonių uždėtos respect
+    return 0;
+  return 180 - a - b; //return missing angle
+}
+
+
+
+// Switch it Up! (žinau kad čia su swwitch'u preferina, bet man if'as labiau patinka nei switchas)
+
+function switchItUp(number)
+{
+  if (number === 0) // reikia nepamiršti ===
+  {
+    return 'Zero';
+  }
+  else if (number === 1)
+  {
+    return 'One';
+  }
+  else if (number === 2)
+  {
+    return 'Two';
+  }
+  else if (number === 3)
+  {
+    return 'Three';
+  }
+  else if (number === 4)
+  {
+    return 'Four';
+  }
+  else if (number === 5)
+  {
+    return 'Five';
+  }
+  else if (number === 6)
+  {
+    return 'Six';
+  }
+  else if (number === 7)
+  {
+    return 'Seven';
+  }
+  else if (number === 8)
+  {
+    return 'Eight';
+  }
+  else if (number === 9)
+  {
+    return 'Nine';
+  }
+  else
+  {
+    return 'The number is not between 0 and 9';
+  }
+  
+}
+
+
+// sprendimas su switch funkcija
+
+  function switchItUp2(number) {
+    switch (number) {
+      case 0: return 'Zero';
+      case 1: return 'One';
+      case 2: return 'Two';
+      case 3: return 'Three';
+      case 4: return 'Four';
+      case 5: return 'Five';
+      case 6: return 'Six';
+      case 7: return 'Seven';
+      case 8: return 'Eight';
+      case 9: return 'Nine';
+    }
+  }
+
+  
+//labai geras būdas išspręst šitą uždavinį
+switchItUp1=n=>["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n] //crazy
+
+// greeting sutrumpintas sprendimas
+const greet = () => "hello world!";
+
+
+
+//Simple multiplication
+
+function simpleMultiplication(number) 
+{
+  if (number %2 ===0)
+  {
+    return number * 8
+  }
+  else
+  {
+    return number * 9
+  }
+}
+
+//kiti sprendimo būdai
+function simpleMultiplication1(n){
+  return n % 2 == 0 ? n * 8 : n * 9
+}
+
+
+
+
+//Grasshopper - Basic Function Fixer
+
+
+function addFive(num) {
+  var total = num + 5
+  return total// čia tesiog vietoj return num reikėjo pataisyti į return total. IDK ar da yra geresnis būdas šitam uždavinui.
+}
+
+
+
+//dar vienas būdas
+function addFive1(num) {
+  return num + 5;
+}
+
+
+//Super Duper Easy
+function problem(x)
+{
+  if (typeof x === 'string')
+  {
+    return "Error"
+  }
+  else
+  {
+    return (x * 50) + 6
+  }
+}
+
+//geresnis būdas išspręsti
+
+const problem1 = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
