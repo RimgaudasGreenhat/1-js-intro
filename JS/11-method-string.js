@@ -332,6 +332,8 @@ console.log(s4);
 
 
 
+console.log('labas'.toUpperCase(1).toLowerCase(2));
+
 
 
 
