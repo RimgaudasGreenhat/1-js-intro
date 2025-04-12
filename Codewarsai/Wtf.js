@@ -840,3 +840,80 @@ function problem(x)
 //geresnis būdas išspręsti
 
 const problem1 = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
+
+
+
+//Grasshopper - If/else syntax debug
+function checkAlive (health) {
+  if (health > 0) 
+  {
+    return true//once again reikėjo sutvarkyti sintakses buvo veltui kliaustų pridėta ir pan.
+  } else 
+  {
+    return false
+  }
+}
+
+
+
+//kiti sprendimo būdai
+
+function checkAlive(health) {
+  return health > 0;
+}
+
+
+//arba
+function checkAlive (health) {
+  return health > 0 ? true : false;
+}
+
+
+
+//Capitalization and Mutability
+
+function capitalizeWord(word) 
+{
+  return word.charAt(0).toUpperCase() + word.slice(1);// reikia daugiau praktikos man prisimenant kad reikia slice'o ir charAt funkcijų :(
+}
+
+
+
+//kiti sprendimo būdai
+
+function capitalizeWord(word) {
+  var str = word[0].toUpperCase();
+  for (let i = 1; i<word.length; i++) { // su for ciklu pasidarė insane XD
+  str += word[i];
+  }
+  return str;
+}
+
+
+//Contamination #1 -String-
+
+function contamination(text, char)
+{
+  return char.repeat(text.length); // kai reikia sakinį paverst į tam tikrą simbolį kuris naudoja originalaus teksto raidžių skaičių reikia naudoti repeat'ą o ne replace'ą :)
+}
+
+
+// kiti sprendimo būdai
+
+function contamination(text, char) {
+  return text.split("").fill(char).join(""); //ai atskiriam textą po vieną raidė, poto pakeičiam tas raides simboliu ir poto sujungiam raides(simbolius tuo atvėju) į tekstą.
+}
+
+
+// sunkesnis metodas su for ciklu
+function contamination(text, char) {
+  if (text.length === 0 || char.length === 0) {
+    return '';
+  } else {
+    let str = '';
+    for (let i = 0; i < text.length; i += 1) {
+      str += char;
+    }
+    return str;
+  }
+}
