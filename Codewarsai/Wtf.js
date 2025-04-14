@@ -917,3 +917,74 @@ function contamination(text, char) {
     return str;
   }
 }
+
+
+//Find the position!
+
+function position(letter)
+{
+  return `Position of alphabet: ${letter.charCodeAt(0) - 96}` // I guess mažųjų raidžių indeksai prasideda nuo 0 - 97, bet čia jei nori kad a = 0
+}
+
+//kitas sprendimo budas
+
+position = l => `Position of alphabet: ${l.charCodeAt() - 96}`;
+
+
+
+
+//Grasshopper - Debug sayHello
+
+function sayHello(name) { //pretty simple tesiog nuimt paprastus skliaustus, pakeist kabutem ir su dolco zenklu pridėt vardą.
+  return `Hello, ${name}`;
+}
+
+//kitas sprendimo būdas
+
+function sayHello (name) {
+  return 'Hello, ' +  name; // ai nu jo galėjau taip padaryt
+}
+
+//arba
+
+const sayHello = name => `Hello, ${name}`;
+
+//Jenny's secret message
+
+function greet(name)
+{
+    if(name === "Johnny")
+        {
+            return "Hello, my love!"; // tesiog aptvarkyt reikėjo, dar bereikalingai sukeičiau vietom ifą, bet gera praktika sintaksei rašyt I guess.
+        }
+        else
+        {
+            return "Hello, " + name + "!";
+        }
+}
+
+
+//kitas būdas
+
+
+function greet(name){
+  return "Hello, " + (name == "Johnny" ? "my love" : name) + "!";
+}
+
+
+
+//A Needle in the Haystack
+
+function findNeedle(haystack)
+{
+  return 'found the needle at position' + (' ') + haystack.indexOf('needle') //bruh wtf aš čia su for ciklu bandžiau išlankstyt, bet nesigavo tai googlas parodė man šitai, va ka reiškia neapsipratint su teksto metodais smh :(
+} 
+
+// kaip su for ciklu galėjau išspręst
+
+function findNeedle(array) {
+  for (var i=0; i<array.length; i++){// ahhhhhhhhh aš bandžiau dar kintamajį susikurt atskirą ir nesigavo man, ko reikėjo tai tik basic fukcijos ir išvedimo :(
+    if (array[i] === 'needle')
+      return 'found the needle at position ' + i;
+  }
+  }
