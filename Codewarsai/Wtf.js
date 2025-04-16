@@ -988,3 +988,113 @@ function findNeedle(array) {
       return 'found the needle at position ' + i;
   }
   }
+
+
+
+  // get planet name by ID
+  function getPlanetName(id){ // va ka reiskia sugrizt prie uzdavinio biski pasimokinus;
+  
+    if(id === 1)
+    {
+      return 'Mercury'
+    }
+    if(id === 2)
+    {
+      return 'Venus'
+    }
+    if(id === 3)
+    {
+      return 'Earth'
+    }
+    if(id === 4)
+    {
+      return 'Mars'
+    }
+    if(id === 5)
+    {
+      return 'Jupiter'
+    }
+    if(id === 6)
+    {
+      return 'Saturn'
+    }
+    if(id === 7)
+    {
+      return 'Uranus'
+    }
+    if(id === 8)
+    {
+      return 'Neptune'
+    }
+  }  
+
+
+  // kiti būdai
+
+  function getPlanetName(id){ //geras trumpersnis būdas
+    return {
+      1: 'Mercury',
+      2: 'Venus',
+      3: 'Earth',
+      4: 'Mars',
+      5: 'Jupiter',
+      6: 'Saturn',
+      7: 'Uranus',
+      8: 'Neptune'
+    }[id]
+  }
+
+
+  // su switchais, ten ką reikėjo pridėt
+
+  function getPlanetName(id){
+    var name;
+    switch(id){
+      case 1:
+        name = 'Mercury' //break'us sudėt kad nesisuktu ciklas
+        break;
+      case 2:
+        name = 'Venus'
+        break;
+      case 3:
+        name = 'Earth'
+        break;
+      case 4:
+        name = 'Mars'
+        break;
+      case 5:
+        name = 'Jupiter'
+        break;
+      case 6:
+        name = 'Saturn'
+        break;
+      case 7:
+        name = 'Uranus'
+        break;
+      case 8:
+        name = 'Neptune'
+    }
+    
+    return name;
+  }
+
+  //You only need one - Beginner
+
+  function check(a, x) { // netaip supratau užduotį pasirodo čia tesiog reik pasižiūrėt ar a turi x reikšmę kažkut savyje, o ne taip kaip aš ten bandžiau su ifais :(.
+    return a.includes(x);
+  }
+
+
+  //kitas sprendimo būdas
+
+  function check(a,x){ //su for ciklu praeinam per kekvieną elementą ir žiūrim ar yra x reikšmė joje.
+    var result = false;
+    for(i = 0; i < a.length; i++){
+      if(a[i]==x){
+      result  = true;
+      }
+     
+    }
+    return result;
+  };
+  
