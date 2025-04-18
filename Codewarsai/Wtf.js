@@ -947,11 +947,11 @@ function sayHello (name) {
 
 //arba
 
-const sayHello = name => `Hello, ${name}`;
+const sayHello1 = name => `Hello, ${name}`;
 
 //Jenny's secret message
 
-function greet(name)
+function greet1(name)
 {
     if(name === "Johnny")
         {
@@ -967,7 +967,7 @@ function greet(name)
 //kitas būdas
 
 
-function greet(name){
+function greet2(name){
   return "Hello, " + (name == "Johnny" ? "my love" : name) + "!";
 }
 
@@ -1098,3 +1098,282 @@ function findNeedle(array) {
     return result;
   };
   
+
+  //L1: Bartender, drinks!
+
+  function getDrinkByProfession(param) // kažkaip jau ir pamiršęs buvau šitą, po savo ragequito prieš dvi savaitęs XD. reik nepamirš trigubos lygybės
+{  let prof = param.toLowerCase();
+
+    if(prof === 'jabroni')
+        {
+            return 'Patron Tequila'
+        }
+    if(prof === 'school counselor')
+        {
+            return 'Anything with Alcohol'
+        }
+    if(prof === 'programmer')
+        {
+            return 'Hipster Craft Beer'
+        }
+    if(prof === 'bike gang member')
+        {
+            return 'Moonshine'
+        }
+    if(prof ==='politician')
+        {
+            return 'Your tax dollars'
+        }
+    if(prof === 'rapper')
+        {
+            return 'Cristal'
+        }
+    else
+    {
+            return 'Beer'
+    }
+  }
+
+  //kitas sprendimo būdas
+
+
+  function getDrinkByProfession(param){
+    let map = new Map([
+        ["jabroni", "Patron Tequila"],
+        ["school counselor", "Anything with Alcohol"],
+        ["programmer", "Hipster Craft Beer"],
+        ["bike gang member", "Moonshine"],
+        ["politician", "Your tax dollars"],
+        ["rapper", "Cristal"]
+        ]);
+        
+     let normal = param.toLowerCase();
+     return map.has(normal) ? map.get(normal) : "Beer";
+      }
+
+
+
+      //arba
+
+      function getDrinkByProfession(param){
+        var list = {
+        "jabroni": "Patron Tequila",
+        "school counselor": "Anything with Alcohol",
+        "programmer": "Hipster Craft Beer",
+        "bike gang member": "Moonshine",
+        "politician": "Your tax dollars",
+        "rapper": "Cristal"
+        }
+        return list[param.toLowerCase()]||"Beer";
+      }
+
+  console.clear();
+
+
+
+  //Sentence Smash
+
+  function smash (words) // tesiog for ciklą prasukau ir kadangi nesigavo pačiam sentence su trimų pasidaryt jį pamėginau į returną perkelt, kad gautame rezultate man apkarpytų tuo tarpus, that's it really.
+{
+    let sentence = '';
+  
+  for (i = 0; i < words.length; i++)
+  {
+    sentence += words[i] + ' '
+  }return sentence.trim()
+};
+
+
+//kitas sprendimo būdas
+
+smash1 = function (words) { //bruh... dar mes ėjom joiną, blemba negalvojau, kad taip galima :D
+  return words.join(" ");
+};
+
+
+//arba
+
+const smash2 = arr => arr.join(" ");
+
+
+//L1: Set Alarm
+
+function setAlarm(employed, vacation)
+{
+    if (employed === true && vacation === false)
+    {
+      return true
+    } 
+    if (employed === true && vacation === true)
+    {
+      return false
+    } 
+    if (employed === false && vacation === true)
+    {
+      return false
+    } 
+    if (employed === false && vacation === false)
+    {
+      return false
+    }
+}
+
+
+//kitas sprendimo būdas
+
+const setAlarm2 = (employed, vacation) => employed && !vacation; // basically pasidaro kad true būtų tik kai employed yra true IR vacation NĖRA TRUEm o visa kita yra false.
+
+
+//arba
+
+function setAlarm3(employed, vacation){
+  return employed && !vacation;
+}
+
+//Beginner Series #1 School Paperwork
+
+
+function paperwork(n, m) 
+{
+    if ( n < 0 || m < 0)
+    {
+      return 0
+    }
+    else
+    {
+      return n*m
+    }
+}
+
+
+// kitas sprendimo būdas
+
+
+paperwork1 = (n, m) => n < 0 || m < 0 ? 0 : n * m
+
+
+
+//arba 
+
+function paperwork3(n, m) {
+  return n > 0 && m > 0 ? n * m : 0
+}
+
+
+
+
+//Pillars
+
+function pillars(numPill, dist, width) 
+{
+    if(numPill > 1)
+    {
+      return (numPill -1) * (dist) *100 + (width * (numPill-1)) - width;
+    } 
+    else
+    {
+      return 0;
+    }
+}
+
+
+//arba
+
+
+pillars1=(n,d,w)=>n>1?(n-1)*d*100+(n-2)*w:0;
+
+
+//arba
+
+function pillars2(num_pill, dist, width) {
+  return num_pill>1?(num_pill-1)*dist*100+(num_pill-2)*width:0;
+}
+
+
+//Did she say hallo?
+
+
+function validateHello(greetings) 
+  { const pasisv = greetings.toLowerCase(); 
+    
+      if(pasisv.includes('hello'))
+      {
+        return true;
+      }
+      else if(pasisv.includes('ciao'))
+      {
+        return true;
+      }
+      else if(pasisv.includes('salut'))
+      {
+        return true;
+      }
+      else if(pasisv.includes('hallo'))
+      {
+        return true;
+      }
+      else if(pasisv.includes('hola'))
+      {
+        return true;
+      }
+      else if(pasisv.includes('ahoj'))
+      {
+        return true;
+      }
+      else if(pasisv.includes('czesc'))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+  }
+
+
+  //kitas sprendimo budas
+
+
+  const hellos = { //geras su for ciklu tesiog prasuko :D
+    hello: 'english',
+    ciao: 'italian',
+    salut: 'french',
+    hallo: 'german',
+    hola: 'spanish',
+    ahoj: 'czech republic',
+    czesc: 'polish',
+    }
+    
+    const validateHello1 = greetings => {
+      for (key in hellos) {
+       if (greetings.toLowerCase().includes(key)) {
+         return true
+       }
+      }
+      return false
+    }
+
+
+
+    //arba
+
+
+    const validateHello2 = greetings => /h[ae]llo|ciao|salut|hola|ahoj|czesc/i.test(greetings);
+
+    //Convert a Boolean to a String
+
+    function booleanToString(b) //tesiog pamačiau nete, visai fainas sprendimas
+    {
+      return `${b}`  
+    }
+
+    //kitas sprendimo budas
+
+    function booleanToString1(b){ //a.... yra grynai funkcija tam
+      return b.toString();
+    }
+
+    //arba
+    function booleanToString2(b){ // that's dope XD
+      return b+'';
+    }
