@@ -1377,3 +1377,143 @@ function validateHello(greetings)
     function booleanToString2(b){ // that's dope XD
       return b+'';
     }
+
+
+    //Thinkful - Logic Drills: Traffic light
+
+    function updateLight(current) 
+  {
+    if(current === "green")
+    {
+      return "yellow";
+    } 
+     else if(current === "yellow")
+    {
+      return "red";
+    } 
+     else if(current === "red")
+    {
+      return "green";
+    }
+  }
+
+
+  //kitas sprendimo budas
+
+  function updateLight1(current) {
+  
+    return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+  
+  }
+
+  //arba
+
+  const updateLight2 = current => ({
+    green: 'yellow',
+    yellow: 'red',
+    red: 'green',
+  })[current]
+
+
+  //Quadrants
+
+  function quadrant(x, y) 
+{
+  if (x < 0 && y < 0)
+  {
+    return 3;
+  }
+  else if (x > 0 && y < 0)
+  {
+    return 4;
+  }
+  else if (x < 0 && y > 0)
+  {
+    return 2;
+  }
+  else if (x > 0 && y > 0)
+  {
+    return 1;
+  }
+}
+
+
+//kitas sprendimo budas
+
+function quadrant1(x, y) {
+  return x > 0 ? y > 0 ? 1 : 4 : y > 0 ? 2 : 3;
+}
+
+
+//arba
+const quadrant2 = (x, y) =>
+  2 * (y < 0) + (x * y < 0) + 1; //wtf is this?
+
+
+//Grasshopper - Check for factor
+
+function checkForFactor (base, factor) 
+  {
+    return base % factor === 0;
+  }
+
+
+  //kitas sprendimo budas
+
+  function checkForFactor1 (base, factor) {
+    return !(base%factor);
+  }
+
+
+  // arba
+  checkForFactor2 = (b, f) => !(b % f) && f != 0;
+
+
+  //Get the mean of an array
+
+  function getAverage(marks) //geras šitas priverte prisimint for cikla ir mathfloorą
+{
+  let suma = 0;
+  for (let vidur of marks)
+  {
+    suma += vidur;
+  }
+  return Math.floor(suma / marks.length);
+}
+
+//kitas sprendimo budas
+
+function getAverage1(marks){
+  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+}
+
+//arba
+
+function getAverage2 (marks) {
+  return Math.floor(marks.reduce((a, b) => a + b, 0) / marks.length);
+}
+
+
+// Reduce but grow
+
+
+function grow(x)
+{
+  let suma = 1; // reik nepamiršti letą pasidaryti 1-ta, nes daugyba iš 0 visada gražins 0 :D
+  for (let num of x)
+  {
+    suma *= num;
+  }
+  return suma
+}
+
+
+//kitas sprendimo budas
+
+const grow1=x=> x.reduce((a,b) => a*b);
+
+
+//arba
+
+const grow2=x=>eval(x.join("*"))
+
