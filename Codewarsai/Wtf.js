@@ -1517,3 +1517,74 @@ const grow1=x=> x.reduce((a,b) => a*b);
 
 const grow2=x=>eval(x.join("*"))
 
+//Grasshopper - Messi goals function
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) 
+{
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+
+//kitas sprendimo budas
+
+const goals1 = (a,b,c) => a + b + c;
+
+
+//Coding 3min : Jumping Dutch act
+
+function sc(floor) // biški pagalvot reikėjo, bet nieko paėjo po kieklaiko :)
+{
+  if (floor < 2)
+  {
+    return "";
+  }
+  if (floor >= 2 && floor < 7)
+  {
+    return 'Aa~ '.repeat(floor - 1) + "Pa!" + ' Aa!';
+  }
+   else
+  {
+    return 'Aa~ '.repeat(floor - 1) + "Pa!";
+  }
+}
+
+
+//kitas sprendimo būdas
+
+function sc1(floor){
+  if(floor <= 1) return "";
+  
+  return 'Aa~ '.repeat(floor-1) + 'Pa!' + (floor<=6 ? ' Aa!': '');
+}
+
+//arba
+
+
+function sc2(floor) {
+  if (floor <= 1) return "";
+  var SCREAM = "";
+  for (let i = 0; i < floor - 1; i++) {
+    SCREAM += "Aa~ ";
+  }
+  SCREAM += "Pa!";
+  if (floor <= 6) SCREAM += " Aa!";
+  return SCREAM;
+}
+
+
+//Return to Sanity
+
+function mystery() { // OMG šitas koks sunkus buvo, tik kelis kartus backspace'ą reikėjo paspaust XD
+  var results =
+    {sanity: 'Hello'};
+  return results;
+}
+
+
+//nes buvo originaliai taip
+
+function mystery1() { // šiaip gal ir neblogai prisiminti sintakse
+    {sanity: 'Hello'};
+  return 
+  results;
+}
+
+
