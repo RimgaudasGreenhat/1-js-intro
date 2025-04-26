@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "easytasks": "node --watch ./task/easytask.js",
     "switch": "node --watch ./js/22-switch.js",
     "tritaskis": "node --watch ./js/21-destruktizavimas-rest.js",
     "reduce": "node --watch ./js/20-reduce.js",

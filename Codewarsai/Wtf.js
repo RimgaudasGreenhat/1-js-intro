@@ -1587,4 +1587,149 @@ function mystery1() { // šiaip gal ir neblogai prisiminti sintakse
   results;
 }
 
+console.clear();
 
+//Unfinished Loop - Bug Fixing #1
+
+function createArray(number) { //Tomis užmiršo pridėt counter ++ tesiog (fucking dummy XD)
+  const newArray = [];
+  for (let counter = 1; counter <= number; counter ++) {
+      newArray.push(counter);
+  }
+  return newArray;
+}
+
+//String Templates - Bug Fixing #5
+function buildString(...template){
+  return `I like ${template.join(', ')}!`; // Tesiog vietoj hashtago reikėjo dolerio ženklo ir joine pridėtis tarpą.
+}
+
+
+//Basic variable assignment
+
+
+var a = "code"; //reikėjo tesiog nuimti papildomus lygybės ženklus, kadangi čia dirbam su stringais
+var b = "wa.rs";
+var name = a + b;
+
+
+//kitas sprendimo budas
+
+let name1 = 'codewa.rs';
+
+
+//Switch/Case - Bug Fixing #6
+
+function evalObject(value){ //nors nenaudoju switch'u bet kažkaip pagalvojau kad gal reikia break'u, sudėjau ir paėjo :)
+  var result = 0;
+  switch(value.operation){
+    case'+': result = value.a + value.b;
+      break;
+    case'-': result = value.a - value.b;
+      break;
+    case'/': result = value.a / value.b;
+      break;
+    case'*': result = value.a * value.b;
+      break;
+    case'%': result = value.a % value.b;
+      break;
+    case'^': result = Math.pow(value.a, value.b);
+  }
+  return result;
+}
+
+//kitas sprendimo metodas
+function evalObject1(value){ //ištrint tesiog result reikėjo :D
+  switch(value.operation){
+    case'+': return value.a + value.b;
+    case'-': return value.a - value.b;
+    case'/': return value.a / value.b;
+    case'*': return value.a * value.b;
+    case'%': return value.a % value.b;
+    case'^': return Math.pow(value.a, value.b);
+  }
+}
+
+
+//semi optional nesuprantu šito pasiaiškinti
+
+
+//Incorrect division method
+
+const solve = (x, y) => x / y //tesiog viena slasha reikejo ištrint nes buvo kaip komentaras paskutinis y :D
+
+
+
+
+//kitas sprendimo būdas
+
+const solve1 = (x, y) => {
+
+  let s = (x/y);
+  if(y == 0){
+    return Infinity;
+  }
+    return s;}
+
+
+//Grasshopper - Debug
+
+
+function weatherInfo (temp) {
+  var c = (temp - 32) * (5/9)
+  if (c <= 0)
+  {
+    return (c + " is freezing temperature")
+  }
+  else
+  {
+    return (c + " is above freezing temperature")
+  }
+    
+}
+
+//kitas sprendimo budas
+
+
+function weatherInfo1 (temp) {
+  var c = convertToCelsius(temp); //a tai galima iš antros funkcijos išsireikštį į pirmą, aš galvojau kad viskas turi eiti paeilui ir tesiog bedarant pagalvojau vait wtf daryt dvi atskiras funkcijas jei galiu padaryt vieną ją :D
+  if (c <= 0)
+    return (c + " is freezing temperature");
+  else
+    return (c + " is above freezing temperature");
+}
+
+function convertToCelsius (temperature) {
+  var celsius = (temperature - 32) * (5/9);
+  return celsius;
+}
+
+
+
+//Push a hash/an object into array
+
+
+items = []
+items.push({a: "b", c: "d"})
+
+//
+
+//kitas sprendimo būdas
+
+items = []
+let myobject = {a: "b", c: "d"}
+items.push (myobject)
+
+
+//Fix the Bugs (Syntax) - My First Kata
+
+function myFirstKata(a,b) {
+  if (typeof(a) !== "number" || typeof(b) !== "number")  //oh man where tf do i eve begin? belenkiek sintaksės klaidų, bet gera praktika man buvo pasitikrint savo sintaksės žinias :D
+  {
+    return false;
+  }
+  else
+  {
+    return a % b + b % a;
+  } 
+}
