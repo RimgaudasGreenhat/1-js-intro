@@ -175,5 +175,3 @@ function wordsIncludingE(array)
 console.log(wordsIncludingE(['evangelija', 'angelas', 'Liuciferis', 'araara', 'ratas']))
 
 
-
-  
