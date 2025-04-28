@@ -1733,3 +1733,72 @@ function myFirstKata(a,b) {
     return a % b + b % a;
   } 
 }
+
+
+
+// Fix your code before the garden dies!
+
+function rainAmount(mm){
+  if (mm >= 40) 
+  {
+       return "Your plant has had more than enough water for today!"
+  }
+   else
+   {
+       return "You need to give your plant " + (40 - mm) + "mm of water"
+   }
+}
+
+
+//Shifty Closures
+
+let name = 'Abe'
+
+const greetAbe = () => 'Hello, ' + name + '!' // tesiog pridėjau prie name 1ta, kad sukurciau skirtingus kintamuosius ir nesidubliuotu tie name
+
+name1 = 'Ben'
+
+const greetBen = () => 'Hello, ' + name1 + '!'
+
+
+
+//kitas sprendiimo budas
+const greet_abe = () => 'Hello, Abe!';
+const greet_ben = () => 'Hello, Ben!';
+
+
+//Max Headroom and JavaScript style
+
+
+function getMax1()
+{
+  var max = 
+  {
+   name: 'Max Headroom' // idk tesiog suvienodinau juos nes var ir jie atskiruose funkcijuose :D
+  }
+  return max;
+}
+
+function getMax2()
+{
+  var max = 
+  {
+    name: 'Max Headroom'
+  }
+  return max;
+}
+
+
+//kitas sprendimo budas
+
+function getMax3()
+{
+  var max = {name: 'Max Headroom'}
+  return max;
+}
+
+function getMax4()
+{
+// Have your return object on same line
+return {name: 'Max Headroom'};
+}
