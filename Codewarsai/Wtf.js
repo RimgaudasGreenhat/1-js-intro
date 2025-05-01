@@ -1802,3 +1802,73 @@ function getMax4()
 // Have your return object on same line
 return {name: 'Max Headroom'};
 }
+
+
+//Training JS #7: if..else and ternary operator
+
+function saleHotdogs(n)
+{
+  if (n < 5)
+  {
+    return n * 100;
+  } 
+  else if (n >=5 && n < 10)
+  {
+    return n * 95;
+  }
+  else if (n >= 10)
+  {
+    return n * 90;
+  }
+}
+
+
+//kitas sprendimo budas
+function saleHotdogs1(n){
+  return n*(n<5?100:n<10?95:90);
+}
+
+
+//Training JS #1: create your first JS function and print "Hello World!"
+
+function helloWorld(string)
+{
+  let str = "Hello World!"
+  console.log(str)
+} 
+
+//kitas sprendimo budas
+
+function helloWorld1() {
+  // creates variable called str to str that equals Hello World
+  var str = "Hello World!";
+  // prints the variable str to the console
+  console.log(str);
+};
+
+// technically you would type in helloWorld down here to 
+// run the function
+
+
+//Training JS #10: loop statement --for
+
+function pickIt(arr){
+  let odd = [], even = [];
+  for (let i = 0; i < arr.length; i++)
+  {
+    if (arr[i] %2 === 0)
+    {
+      even.push(arr[i]);
+    } 
+    else
+    {
+      odd.push(arr[i]);
+    }
+  }
+  
+  
+  return [odd,even];
+}
+
+//Training JS #12: loop statement --for..in and for..of nesuprantu paklaust Gabijos
+
